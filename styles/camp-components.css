@@ -95,12 +95,14 @@
 .pj-themed.mythras.sheet .sheet-tabs {
   font-family: var(--pj-font-title);
   border-color: var(--pj-border);
+  background: rgba(241, 230, 204, .42);
 }
 
 .pj-themed.mythras.sheet .sheet-tabs .item.active {
   color: var(--pj-accent-ink);
   border-bottom: 3px solid var(--pj-orange);
   text-shadow: none;
+  background: rgba(242, 107, 33, .1);
 }
 
 .pj-themed.mythras.sheet {
@@ -204,10 +206,23 @@
   --pj-result-success: #18794e;
   --pj-result-critical: #9a6700;
 }
-.chat-message .pj-result-failure { color: var(--pj-result-failure); }
-.chat-message .pj-result-success { color: var(--pj-result-success); }
-.chat-message .pj-result-critical { color: var(--pj-result-critical); font-weight: 700; }
-.chat-message :is(.pj-result-failure, .pj-result-success, .pj-result-critical) strong { color: inherit; }
+
+.chat-message .pj-result-failure {
+  color: var(--pj-result-failure);
+}
+
+.chat-message .pj-result-success {
+  color: var(--pj-result-success);
+}
+
+.chat-message .pj-result-critical {
+  color: var(--pj-result-critical);
+  font-weight: 700;
+}
+
+.chat-message :is(.pj-result-failure, .pj-result-success, .pj-result-critical) strong {
+  color: inherit;
+}
 
 .pj-prefs .pj-footer {
   display: flex;
@@ -233,13 +248,38 @@
    ≥ 12px. Só apresentação — nenhum valor de ator é alterado (Art. IV). */
 
 .pj-themed.mythras.sheet .sheet-header {
-  gap: 12px;
-  padding: 12px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1.6fr);
+  align-items: center;
+  gap: 18px;
+  min-height: 164px;
+  padding: 14px 16px 16px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7, 27, 48, .34), transparent 42%),
+    linear-gradient(180deg, #174b78 0%, #0b2a4a 100%);
+}
+
+.pj-themed.mythras.sheet .sheet-header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--pj-gold), var(--pj-orange), var(--pj-gold));
+  opacity: .9;
 }
 
 .pj-themed.mythras.sheet .header-personal {
   align-items: center;
   gap: 10px;
+  min-width: 0;
+}
+
+/* O sistema entrega os cartões num wrapper sem classe. Mantemos o wrapper
+   como a segunda coluna em vez de o deixar cair para uma nova linha. */
+.pj-themed.mythras.sheet .sheet-header> :not(.header-personal) {
+  min-width: 0;
 }
 
 .pj-themed.mythras.sheet .profile-img {
@@ -247,6 +287,7 @@
   border-radius: 50%;
   transition: transform 450ms cubic-bezier(0.32, 0.72, 0, 1),
     box-shadow 450ms cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 0 0 4px rgba(11, 42, 74, .75), 0 0 0 5px rgba(217, 180, 90, .65);
 }
 
 .pj-themed.mythras.sheet .profile-img:hover {
@@ -259,6 +300,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .pj-themed.mythras.sheet .names input {
@@ -272,6 +314,9 @@
 .pj-themed.mythras.sheet input.char-name {
   font-family: var(--pj-font-title);
   font-size: 22px;
+  letter-spacing: .02em;
+  background: rgba(241, 230, 204, .92);
+  color: var(--pj-ink);
 }
 
 .pj-themed.mythras.sheet input.player-name {
@@ -286,7 +331,10 @@
 
 /* Atributos: cartões com valor centralizado e números tabulares. */
 .pj-themed.mythras.sheet .header-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
+  width: 100%;
 }
 
 /* Double-Bezel: shell externo (moldura dourada) + núcleo interno (relevo). */
@@ -296,20 +344,58 @@
   padding: 5px 6px 7px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(217, 180, 90, 0.55);
-  border-radius: 14px;
+  border-radius: 8px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14),
     0 6px 14px -8px rgba(43, 29, 14, 0.55);
   animation: pj-rise 560ms cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
-.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(2) { animation-delay: 50ms; }
-.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(3) { animation-delay: 100ms; }
-.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(4) { animation-delay: 150ms; }
-.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(5) { animation-delay: 200ms; }
+.pj-themed.mythras.sheet .stats-container p {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, .92);
+  font-size: 11px;
+  line-height: 1.15;
+}
+
+@media (max-width: 760px) {
+  .pj-themed.mythras.sheet .sheet-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pj-themed.mythras.sheet .header-stats {
+    grid-template-columns: repeat(5, minmax(76px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+}
+
+.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(2) {
+  animation-delay: 50ms;
+}
+
+.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(3) {
+  animation-delay: 100ms;
+}
+
+.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(4) {
+  animation-delay: 150ms;
+}
+
+.pj-themed.mythras.sheet .header-stats .stats-container:nth-child(5) {
+  animation-delay: 200ms;
+}
 
 @keyframes pj-rise {
-  from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: none; }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .pj-themed.mythras.sheet .number-input-container {
@@ -417,11 +503,119 @@
   }
 
   .pj-themed.mythras.sheet :is(.plus-minus-buttons a, .stat-settings, .profile-img,
-      .number-input-container input, .names input) {
+    .number-input-container input, .names input) {
     transition: none;
   }
 
   .pj-themed.mythras.sheet :is(.plus-minus-buttons a, .stat-settings, .profile-img):hover {
     transform: none;
+  }
+}
+
+/* ---------- Parte 4: acabamento da ficha (v0.0.10) ----------
+   O sistema fornece a estrutura; estes tokens dão ritmo consistente aos
+   painéis e às tabelas sem tocar nos dados dos atores. */
+.pj-themed.mythras.sheet .sheet-body {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .16), transparent 24%);
+}
+
+.pj-themed.mythras.sheet .tab.core.active,
+.pj-themed.mythras.sheet .tab.combat.active,
+.pj-themed.mythras.sheet .tab.abilities.active,
+.pj-themed.mythras.sheet .tab.equipment.active,
+.pj-themed.mythras.sheet .tab.notes.active {
+  padding: 10px 10px 18px;
+}
+
+.pj-themed.mythras.sheet .d-flex--with-separators {
+  display: grid;
+  grid-template-columns: minmax(250px, .88fr) minmax(0, 1.42fr);
+  gap: 16px;
+}
+
+.pj-themed.mythras.sheet .d-flex--with-separators > .flex-2,
+.pj-themed.mythras.sheet .d-flex--with-separators > .flex-3 {
+  min-width: 0;
+  width: auto;
+}
+
+.pj-themed.mythras.sheet .d-flex--with-separators > .flex-2 {
+  padding-right: 16px;
+  border-right: 1px solid rgba(176, 141, 87, .65);
+}
+
+.pj-themed.mythras.sheet .titled-section {
+  padding: 8px 10px 10px;
+  border: 1px solid rgba(176, 141, 87, .55);
+  background: rgba(255, 255, 255, .22);
+}
+
+.pj-themed.mythras.sheet .titled-section + .titled-section {
+  margin-top: 10px;
+}
+
+.pj-themed.mythras.sheet .titled-section > h2,
+.pj-themed.mythras.sheet .titled-section > h3,
+.pj-themed.mythras.sheet .titled-section__title {
+  margin: -8px -10px 8px;
+  padding: 5px 8px 4px;
+  border-bottom: 2px solid var(--pj-orange);
+  background: rgba(230, 215, 179, .48);
+}
+
+.pj-themed.mythras.sheet table {
+  border-collapse: separate;
+  border-spacing: 0 2px;
+}
+
+.pj-themed.mythras.sheet table thead th {
+  padding: 5px 6px;
+  background: rgba(43, 29, 14, .08);
+  color: var(--pj-ink);
+  font-size: 12px;
+  letter-spacing: .02em;
+}
+
+.pj-themed.mythras.sheet table tbody tr {
+  background: rgba(255, 255, 255, .34);
+  transition: background-color 180ms ease;
+}
+
+.pj-themed.mythras.sheet table tbody tr:nth-child(even) {
+  background: rgba(230, 215, 179, .36);
+}
+
+.pj-themed.mythras.sheet table tbody tr:hover {
+  background: rgba(242, 107, 33, .12);
+}
+
+.pj-themed.mythras.sheet table tbody td {
+  padding: 4px 6px;
+  vertical-align: middle;
+}
+
+.pj-themed.mythras.sheet .core-skills .d-flex--gap-medium {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(240px, .85fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.pj-themed.mythras.sheet .core-skills .d-flex--gap-medium > .flex-1 {
+  min-width: 0;
+  width: auto;
+}
+
+@media (max-width: 760px) {
+  .pj-themed.mythras.sheet .d-flex--with-separators,
+  .pj-themed.mythras.sheet .core-skills .d-flex--gap-medium {
+    grid-template-columns: 1fr;
+  }
+
+  .pj-themed.mythras.sheet .d-flex--with-separators > .flex-2 {
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgba(176, 141, 87, .65);
+    padding-bottom: 12px;
   }
 }

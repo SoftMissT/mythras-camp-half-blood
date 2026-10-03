@@ -1,3 +1,12 @@
+## 0.0.10 (2026-10-03): redesign da HUD e composição da ficha
+
+- **Corrigido:** cabeçalho da ficha deixou de quebrar os cartões de atributos para uma segunda linha; identidade e recursos agora ocupam duas colunas alinhadas.
+- **Corrigido:** altura mínima, espaçamento e largura dos cartões ajustados para remover o vazio visual e a compressão dos campos.
+- **Redesign:** cabeçalho agora usa contraste em camadas, moldura de avatar, campo de personagem em pergaminho, cartões de recurso com raio controlado e faixa de navegação integrada.
+- **Redesign:** conteúdo da ficha agora usa painéis com cabeçalho, divisores, zebra suave, hover legível e tabelas com ritmo uniforme; Personagem e Habilidades deixaram de parecer listas sem composição.
+- **Novo:** fallback responsivo para telas estreitas com rolagem horizontal apenas na faixa de recursos.
+- **Validação:** captura ao vivo no Foundry após injeção do CSS mostrou o cabeçalho reduzido de 282px para 164px; `git diff --check` e `node --check scripts/a11y.mjs` passaram.
+
 ## 0.0.9 (2026-10-03): HUD do cabeçalho acessível + locais de acerto em português
 
 - **Novo:** HUD do cabeçalho reestruturada (Parte 3 do CSS): avatar com borda dourada, nomes com rótulo junto ao campo (13px), cartões de atributos sobre o azul do cabeçalho, números tabulares. Alvos de clique >= 24x24px (WCAG 2.5.8) em +/-, engrenagem e controles da janela; anel de foco visível de 2px com contraste AA.

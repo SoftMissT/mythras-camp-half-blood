@@ -7,7 +7,9 @@ function rotulo(el) {
   );
   if (vizinho) return vizinho.textContent.trim();
   return (
-    el.closest(".stats-container")?.querySelector(".stat-minimizer")
+    el
+      .closest(".stats-container")
+      ?.querySelector(".stat-minimizer")
       ?.textContent.trim() ?? ""
   );
 }
@@ -16,7 +18,8 @@ function operavel(el, nome) {
   if (el.dataset.pjA11y === "1") return;
   el.setAttribute("tabindex", "0");
   el.setAttribute("role", "button");
-  if (nome && !el.hasAttribute("aria-label")) el.setAttribute("aria-label", nome);
+  if (nome && !el.hasAttribute("aria-label"))
+    el.setAttribute("aria-label", nome);
   el.addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
     event.preventDefault();
@@ -27,7 +30,9 @@ function operavel(el, nome) {
 
 function enhance(root) {
   for (const btn of root.querySelectorAll?.(".plus-minus-buttons a") ?? []) {
-    const acao = btn.classList.contains("stat-increase") ? "Aumentar" : "Diminuir";
+    const acao = btn.classList.contains("stat-increase")
+      ? "Aumentar"
+      : "Diminuir";
     operavel(btn, `${acao} ${rotulo(btn)}`.trim());
   }
   const engrenagem = root.querySelector?.(".stat-settings");

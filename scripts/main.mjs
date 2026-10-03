@@ -48,7 +48,10 @@ Hooks.once("init", () => {
     Hooks.on(`render${cls}`, seguro(`tradução ${cls}`, translateMythrasSheet));
   }
   // Diálogos do sistema (ex.: Stat Tracker) — só rótulos conhecidos do LABELS.
-  Hooks.on("renderDialog", seguro("tradução de diálogo", translateMythrasSheet));
+  Hooks.on(
+    "renderDialog",
+    seguro("tradução de diálogo", translateMythrasSheet),
+  );
   Hooks.on(
     "renderChatMessageHTML",
     seguro("tradução do chat", (_message, html) => {
@@ -59,7 +62,10 @@ Hooks.once("init", () => {
     `render${SHEET_CLASS_NAME}`,
     seguro("rolagem rápida", attachQuickRoll),
   );
-  Hooks.on(`render${SHEET_CLASS_NAME}`, seguro("acessibilidade", enhanceSheetA11y));
+  Hooks.on(
+    `render${SHEET_CLASS_NAME}`,
+    seguro("acessibilidade", enhanceSheetA11y),
+  );
   const mod = game.modules.get(MODULE_ID);
   if (mod) mod.api = { version: mod.version, resetPreferences };
 });
