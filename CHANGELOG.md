@@ -5,7 +5,7 @@
 - **Novo:** ficha Camp Half-Blood inicia ativa ao habilitar o módulo, com tema claro.
 - **Novo:** migração única para instalações da v0.0.2, preservando o sistema Mythras e documentos dos atores.
 - **Novo:** banner `assets/banner_modulo.webp`, imagem de setup no manifesto e badges no README.
-- **Mudou:** fontes passaram a usar Google Fonts (`Cinzel` e `Alegreya Sans`); arquivos locais antigos permanecem no repositório por compatibilidade histórica.
+- **Mudou:** fontes passaram a usar Google Fonts (`Cinzel` e `Alegreya Sans`); fontes binárias locais removidas do módulo.
 - **Distribuição:** manifesto aponta para GitHub, release `v0.0.3` e artefato ZIP.
 
 ## Próxima versão (não publicada)

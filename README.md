@@ -1,37 +1,39 @@
 # Mythras — Camp Half-Blood
 
-[![Validate module](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml/badge.svg)](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml)
-[![Foundry v14](https://img.shields.io/badge/Foundry-v14-7b2cbf)](https://foundryvtt.com/)
-[![Mythras](https://img.shields.io/badge/System-Mythras-0b2a4a)](https://foundryvtt.com/packages/mythras)
-
 ![Banner Camp Half-Blood](assets/banner_modulo.webp)
 
-Módulo para Foundry VTT que adiciona preferências por jogador à ficha do sistema Mythras, rolagem rápida de perícias e um tema opcional inspirado no Acampamento Meio-Sangue.
+Módulo para Foundry VTT e sistema Mythras. A ficha Camp Half-Blood, rolagem rápida e temas claro/escuro ficam disponíveis por jogador.
 
-## Estado
+## Download
 
-Versão atual: `0.0.3`. Alvo declarado: Foundry VTT v13+, verificado em v14, sistema `mythras`.
+**[Baixar Mythras Camp Half-Blood v0.0.3](https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.3/mythras-camp-halfblood-v0.0.3.zip)**
 
-O módulo não altera atributos, PV, perícias ou documentos do sistema. Ele apenas registra preferências `scope: user`, adiciona listeners à ficha e reaproveita a rolagem nativa do Mythras.
+Manifesto para instalação direta no Foundry:
+
+`https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.3/module.json`
 
 ## Instalação
 
-1. No Foundry, abra **Add-on Modules → Install Module**.
-2. Use o `module.json` publicado no GitHub quando o repositório tiver uma release.
-3. Ative **Mythras – Camp Half-Blood** em um mundo que use o sistema `mythras`.
-4. Abra uma ficha e use o botão **Camp** para preferências.
+1. Foundry → **Add-on Modules** → **Install Module**.
+2. Cole o endereço do manifesto acima ou instale o ZIP baixado.
+3. Ative o módulo em um mundo que use o sistema `mythras`.
+4. A ficha Camp Half-Blood inicia ativa no modo claro.
 
-## Preferências
+## Recursos
 
-- Ao ativar o módulo, a ficha Camp Half-Blood já inicia ativa no modo claro.
-- `Sistema`: respeita o modo do Foundry; o tema permanece desligado na ficha clássica.
-- `Claro` e `Escuro`: aplicam tokens visuais somente à ficha do jogador atual.
-- `Rolagem rápida`: clique esquerdo rola diretamente; clique direito/Shift abre o menu nativo.
+- Layout Camp Half-Blood ativado por padrão.
+- Temas `Sistema`, `Claro` e `Escuro`.
+- Preferências individuais por jogador.
+- Rolagem rápida de perícias sem substituir a mecânica nativa do Mythras.
+- Resultado visual: falha vermelha, sucesso verde e crítico dourado.
+- Não altera atributos, PV, perícias ou documentos dos personagens.
 
-## Desenvolvimento
+## Compatibilidade
 
-O projeto é ESModule sem bundler. Antes de publicar uma versão, valide JSON, sintaxe dos `.mjs`, caminhos do manifesto e o roteiro `TESTES-v0.2.txt` em um mundo Foundry real.
+- Foundry VTT: v13+; verificado em v14.
+- Sistema: `mythras`.
+- Versão: `0.0.3`.
 
 ## Licença
 
-MIT. Consulte [LICENSE](LICENSE).
+MIT — [LICENSE](LICENSE).
