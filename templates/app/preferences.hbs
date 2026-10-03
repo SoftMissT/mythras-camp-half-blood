@@ -1,23 +1,14 @@
 <div class="pj-panel">
   <section class="pj-group">
-    <h3>{{localize 'PJ.Prefs.Layout'}}</h3>
-    <div class="pj-seg" role="group" aria-label="{{localize 'PJ.Prefs.Layout'}}">
-      <button type="button" data-action="setLayout" data-layout="classic" aria-pressed="{{isClassic}}">{{localize 'PJ.Prefs.LayoutClassic'}}</button>
-      <button type="button" data-action="setLayout" data-layout="camp" aria-pressed="{{isCamp}}" {{#unless campEnabled}}disabled{{/unless}}>{{localize 'PJ.Prefs.LayoutCamp'}}</button>
-    </div>
-    {{#unless campEnabled}}<p class="pj-hint">{{localize 'PJ.Prefs.LayoutCampSoon'}}</p>{{/unless}}
-  </section>
-
-  <section class="pj-group">
     <h3>{{localize 'PJ.Prefs.Theme'}}</h3>
-    <button type="button" class="pj-toggle" data-action="toggleTheme" aria-pressed="{{themeOn}}">
+    <div class="pj-toggle pj-static-state" role="status" aria-live="polite">
       <img src="{{emblem}}" alt="" width="30" height="30">
       <span class="pj-toggle-text">
-      <strong>{{localize 'PJ.Prefs.ThemeToggle'}}: {{themeLabel}}</strong>
-      <small>{{localize 'PJ.Prefs.ThemeHint'}}</small>
+        <strong>{{localize 'PJ.Prefs.ThemeToggle'}}: {{themeLabel}}</strong>
+        <small>{{localize 'PJ.Prefs.ThemeHint'}}</small>
       </span>
-      <span class="pj-state">{{#if themeOn}}{{localize 'PJ.Prefs.On'}}{{else}}{{localize 'PJ.Prefs.Off'}}{{/if}}</span>
-    </button>
+      <span class="pj-state">{{localize 'PJ.Prefs.On'}}</span>
+    </div>
   </section>
 
   <section class="pj-group">

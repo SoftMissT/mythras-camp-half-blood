@@ -176,7 +176,7 @@
   white-space: nowrap;
 }
 
-/* Estado ligado: fundo laranja escuro com texto branco (contraste AA) + o texto "Ligado" */
+/* Estado ligado: fundo laranja profundo com texto branco (contraste AA). */
 .pj-prefs button[aria-pressed="true"] {
   background: #a63c08;
   color: #fff;
@@ -197,10 +197,15 @@
   cursor: not-allowed;
 }
 
-/* Falha vermelha, sucesso verde, crítico dourado; o sistema continua calculando. */
-.chat-message .pj-result-failure { color: #b42318; }
-.chat-message .pj-result-success { color: #18794e; }
-.chat-message .pj-result-critical { color: #9a6700; font-weight: 700; }
+/* Resultado d100: o sistema calcula; o módulo só colore a célula identificada. */
+:root {
+  --pj-result-failure: #b42318;
+  --pj-result-success: #18794e;
+  --pj-result-critical: #9a6700;
+}
+.chat-message .pj-result-failure { color: var(--pj-result-failure); }
+.chat-message .pj-result-success { color: var(--pj-result-success); }
+.chat-message .pj-result-critical { color: var(--pj-result-critical); font-weight: 700; }
 .chat-message :is(.pj-result-failure, .pj-result-success, .pj-result-critical) strong { color: inherit; }
 
 .pj-prefs .pj-footer {

@@ -1,5 +1,13 @@
 # Histórico de versões
 
+## 0.0.4 (2026-10-03): resultados d100 e português
+
+- **Removido:** modo escuro, modo sistema e seletor de layout alternativo.
+- **Novo:** visual Camp claro único, ativo por padrão e migrado de instalações anteriores.
+- **Novo:** classificação estrutural dos resultados d100, com falha vermelha, sucesso verde e crítico dourado.
+- **Novo:** tradução do painel e dos rótulos estáticos expostos pela ficha Mythras.
+- **Validação:** testes Node para classificador, resíduos de tema e fontes empacotadas.
+
 ## 0.0.3 (2026-10-03): Camp ativo por padrão
 
 - **Novo:** ficha Camp Half-Blood inicia ativa ao habilitar o módulo, com tema claro.

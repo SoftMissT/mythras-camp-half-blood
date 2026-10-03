@@ -1,4 +1,4 @@
-import { MODULE_ID, SETTINGS, LAYOUTS_ENABLED, LOG } from "./constants.mjs";
+import { MODULE_ID, SETTINGS, LOG } from "./constants.mjs";
 import { getPref, setPref, resetPreferences } from "./prefs.mjs";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api;
@@ -34,8 +34,6 @@ export class PreferencesApp extends HandlebarsApplicationMixin(ApplicationV2) {
       resizable: false,
     },
     actions: {
-      setLayout: PreferencesApp.onSetLayout,
-      toggleTheme: PreferencesApp.onToggleTheme,
       toggleQuickRoll: PreferencesApp.onToggleQuickRoll,
       reset: PreferencesApp.onReset,
     },
@@ -54,30 +52,12 @@ export class PreferencesApp extends HandlebarsApplicationMixin(ApplicationV2) {
 
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
-    const layout = getPref(SETTINGS.LAYOUT);
     return Object.assign(context, {
-      isClassic: layout === "classic",
-      isCamp: layout === "camp",
-      campEnabled: LAYOUTS_ENABLED.includes("camp"),
-      theme: getPref(SETTINGS.THEME),
-      themeLabel: game.i18n.localize(`PJ.Prefs.Theme${getPref(SETTINGS.THEME)[0].toUpperCase()}${getPref(SETTINGS.THEME).slice(1)}`),
-      themeOn: getPref(SETTINGS.THEME) !== "system",
+      themeLabel: game.i18n.localize("PJ.Prefs.ThemeLight"),
       quickRollOn: !!getPref(SETTINGS.QUICK_ROLL),
       emblem: `modules/${MODULE_ID}/assets/emblema-acampamento.svg`,
       version: game.modules.get(MODULE_ID)?.version ?? "",
     });
-  }
-
-  static onSetLayout(event, target) {
-    const value = target.dataset.layout;
-    if (!LAYOUTS_ENABLED.includes(value)) return undefined;
-    return guardado(this, () => setPref(SETTINGS.LAYOUT, value));
-  }
-
-  static onToggleTheme() {
-    const current = getPref(SETTINGS.THEME);
-    const next = current === "system" ? "dark" : current === "dark" ? "light" : "system";
-    return guardado(this, () => setPref(SETTINGS.THEME, next));
   }
 
   static onToggleQuickRoll() {

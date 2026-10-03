@@ -13,14 +13,12 @@ export const SETTINGS = Object.freeze({
   MIGRATION: "migration",
 });
 
-// Valores padrão: com eles, nenhuma ficha muda de aparência (Constituição, Art. V).
+// O módulo assume o visual Camp claro; a ficha original continua disponível pelos dados do sistema.
 export const DEFAULTS = Object.freeze({
   layout: "camp",
   theme: "light",
   quickRoll: true,
 });
 
-export const THEME_IDS = Object.freeze(["system", "light", "dark"]);
-export const CURRENT_MIGRATION = "0.0.3";
-// Layouts que o painel permite escolher nesta versão (o Camp chega na v0.3).
-export const LAYOUTS_ENABLED = Object.freeze(["classic", "camp"]);
+export const THEME_IDS = Object.freeze(["light"]);
+export const CURRENT_MIGRATION = "0.0.4";

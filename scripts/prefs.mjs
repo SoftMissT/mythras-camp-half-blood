@@ -19,11 +19,9 @@ export function setPref(key, value) {
   return game.settings.set(MODULE_ID, key, value);
 }
 
-// Tema efetivo: "system" mantém a ficha clássica sem o escopo visual; claro/escuro são explícitos.
+// O módulo oferece somente o visual Camp claro.
 export function effectiveTheme() {
-  const theme = getPref(SETTINGS.THEME);
-  if (theme === "light" || theme === "dark") return theme;
-  return getPref(SETTINGS.LAYOUT) === "camp" ? "light" : null;
+  return "light";
 }
 
 // Junta as fichas Mythras que estão abertas. `_sheet` é a instância já criada de cada ator
