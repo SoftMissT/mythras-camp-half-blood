@@ -2,13 +2,13 @@
   "id": "mythras-camp-halfblood",
   "title": "Mythras – Camp Half-Blood",
   "description": "Ficha Camp Half-Blood para Mythras, rolagem rápida de perícias e visual claro em português. Não altera dados do sistema.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "authors": [{"name": "SoftMissT"}],
   "url": "https://github.com/SoftMissT/mythras-camp-half-blood",
   "readme": "https://github.com/SoftMissT/mythras-camp-half-blood/blob/main/README.md",
   "license": "LICENSE",
   "manifest": "https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/module.json",
-  "download": "https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.5/mythras-camp-halfblood-v0.0.5.zip",
+  "download": "https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.6/mythras-camp-halfblood-v0.0.6.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "14"

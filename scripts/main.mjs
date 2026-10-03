@@ -6,7 +6,7 @@ import { applyTheme } from "./theme.mjs";
 import { checkEnvironment } from "./safety.mjs";
 import { resetPreferences } from "./prefs.mjs";
 import { registerChatResultStyling } from "./chat-results.mjs";
-import { translateMythrasSheet } from "./sheet-translation.mjs";
+import { translateMythrasSheet, translateMythrasChatMessage } from "./sheet-translation.mjs";
 
 // Um erro nosso nunca pode impedir a ficha de abrir (Constituição, Art. IV).
 const seguro =
@@ -31,6 +31,9 @@ Hooks.once("init", () => {
   registerChatResultStyling();
   Hooks.on(`render${SHEET_CLASS_NAME}`, seguro("tema", applyTheme));
   Hooks.on(`render${SHEET_CLASS_NAME}`, seguro("tradução", translateMythrasSheet));
+  Hooks.on("renderChatMessageHTML", seguro("tradução do chat", (_message, html) => {
+    translateMythrasChatMessage(html);
+  }));
   Hooks.on(
     `render${SHEET_CLASS_NAME}`,
     seguro("rolagem rápida", attachQuickRoll),
@@ -41,6 +44,6 @@ Hooks.once("init", () => {
 
 Hooks.once("ready", () => {
   if (game.system.id !== SYSTEM_ID) return;
-  migrateToCampTemplate().catch((err) => console.warn(LOG, "Falha na migração v0.0.4.", err));
+  migrateToCampTemplate().catch((err) => console.warn(LOG, "Falha na migração v0.0.6.", err));
   seguro("verificação", checkEnvironment)();
 });

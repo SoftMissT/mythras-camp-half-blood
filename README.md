@@ -3,7 +3,7 @@
 [![Validação](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml/badge.svg)](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml)
 [![Foundry VTT v14](https://img.shields.io/badge/Foundry%20VTT-v14-7b2cbf)](https://foundryvtt.com/)
 [![Sistema Mythras](https://img.shields.io/badge/sistema-Mythras-0b2a4a)](https://foundryvtt.com/packages/mythras)
-[![Versão](https://img.shields.io/badge/versão-0.0.5-f26b21)](https://github.com/SoftMissT/mythras-camp-half-blood/releases/tag/v0.0.5)
+[![Versão](https://img.shields.io/badge/versão-0.0.6-f26b21)](https://github.com/SoftMissT/mythras-camp-half-blood/releases/tag/v0.0.6)
 [![Licença MIT](https://img.shields.io/badge/licença-MIT-18794e)](LICENSE)
 
 ![Banner Camp Half-Blood](assets/banner_modulo.webp)
@@ -34,13 +34,13 @@ https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/mo
 - Rolagem rápida de perícias sem substituir a mecânica nativa do Mythras.
 - Resultado visual: falha vermelha, sucesso verde e crítico dourado.
 - Não altera atributos, PV, perícias ou documentos dos personagens.
-- Traduz o painel do módulo e os rótulos estáticos que a ficha Mythras expõe; a ficha base continua pertencendo ao sistema Mythras.
+- Traduz o painel, os rótulos e os nomes canônicos de perícias que a ficha Mythras expõe; a ficha base continua pertencendo ao sistema Mythras.
 
 ## Compatibilidade
 
 - Foundry VTT: v13+; verificado em v14.
 - Sistema: `mythras`.
-- Versão publicada: `0.0.5`.
+- Versão publicada: `0.0.6`.
 - Atualizações: o manifesto `latest` permite que o Foundry encontre novas releases sem reinstalação manual.
 
 ## Licença

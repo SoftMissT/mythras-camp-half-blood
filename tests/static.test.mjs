@@ -47,5 +47,5 @@ test("manifesto mantém o canal estável de atualização do Foundry", () => {
     manifest.manifest,
     "https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/module.json",
   );
-  assert.match(manifest.download, /releases\/download\/v0\.0\.5\/mythras-camp-halfblood-v0\.0\.5\.zip$/);
+  assert.match(manifest.download, /releases\/download\/v0\.0\.6\/mythras-camp-halfblood-v0\.0\.6\.zip$/);
 });

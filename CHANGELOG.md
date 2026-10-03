@@ -1,5 +1,11 @@
 # Histórico de versões
 
+## 0.0.6 (2026-10-03): localização completa da ficha
+
+- **Corrigido:** rótulos de atributos, movimento, fadiga, cabeçalhos de perícias e resultados do chat agora são traduzidos no DOM renderizado.
+- **Novo:** nomes canônicos das perícias padrão do Mythras aparecem em português sem alterar os dados do Actor.
+- **Novo:** a tradução acompanha re-renderizações da ficha e cartões d100 do chat.
+
 ## 0.0.5 (2026-10-03): canal de atualização do Foundry
 
 - **Corrigido:** o campo `manifest` agora usa a URL estável `releases/latest/download/module.json`.

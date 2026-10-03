@@ -1,4 +1,4 @@
-MYTHRAS – CAMP HALF-BLOOD  ·  versão 0.0.5
+MYTHRAS – CAMP HALF-BLOOD  ·  versão 0.0.6
 Instalação (sem programar, sem GitHub)
 
 1) FECHE o Foundry (ou pelo menos saia do mundo).

@@ -21,4 +21,4 @@ export const DEFAULTS = Object.freeze({
 });
 
 export const THEME_IDS = Object.freeze(["light"]);
-export const CURRENT_MIGRATION = "0.0.4";
+export const CURRENT_MIGRATION = "0.0.6";
