@@ -1,5 +1,11 @@
 # Mythras Camp Half-Blood
 
+[![Validação](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml/badge.svg)](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml)
+[![Foundry VTT v14](https://img.shields.io/badge/Foundry%20VTT-v14-7b2cbf)](https://foundryvtt.com/)
+[![Sistema Mythras](https://img.shields.io/badge/sistema-Mythras-0b2a4a)](https://foundryvtt.com/packages/mythras)
+[![Versão](https://img.shields.io/badge/versão-0.0.4-f26b21)](https://github.com/SoftMissT/mythras-camp-half-blood/releases/tag/v0.0.4)
+[![Licença MIT](https://img.shields.io/badge/licença-MIT-18794e)](LICENSE)
+
 ![Banner Camp Half-Blood](assets/banner_modulo.webp)
 
 Módulo para Foundry VTT e sistema Mythras. A ficha Camp Half-Blood, rolagem rápida e visual claro em português ficam disponíveis por jogador.
@@ -8,7 +14,7 @@ Módulo para Foundry VTT e sistema Mythras. A ficha Camp Half-Blood, rolagem rá
 
 **[Baixar Mythras Camp Half-Blood v0.0.4](https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.4/mythras-camp-halfblood-v0.0.4.zip)**
 
-Manifesto para instalação direta no Foundry use o botão **Copy** no canto do bloco:
+Para instalar pelo manifesto, use o botão **Copy** no canto do bloco e cole o endereço no Foundry:
 
 ```text
 https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.4/module.json
@@ -23,7 +29,6 @@ https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.4/modul
 
 ## Recursos
 
-- Layout Camp Half-Blood ativado por padrão.
 - Visual Camp claro ativado por padrão.
 - Preferências individuais por jogador.
 - Rolagem rápida de perícias sem substituir a mecânica nativa do Mythras.
