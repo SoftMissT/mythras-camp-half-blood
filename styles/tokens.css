@@ -25,6 +25,9 @@
   --pj-input-bg: rgba(255, 255, 255, 0.55);
   --pj-btn-bg: var(--pj-sea);
   --pj-btn-text: var(--pj-parchment);
+
+  /* Anel de foco: profundo sobre pergaminho (5.2:1), laranja sobre o azul do cabeçalho (3.4:1). */
+  --pj-focus: var(--pj-orange-deep);
 }
 
 .pj-themed.mythras.sheet.pj-theme-light {

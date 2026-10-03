@@ -12,6 +12,7 @@ import { applyTheme } from "./theme.mjs";
 import { checkEnvironment } from "./safety.mjs";
 import { resetPreferences } from "./prefs.mjs";
 import { registerChatResultStyling } from "./chat-results.mjs";
+import { enhanceSheetA11y } from "./a11y.mjs";
 import {
   translateMythrasSheet,
   translateMythrasChatMessage,
@@ -58,6 +59,7 @@ Hooks.once("init", () => {
     `render${SHEET_CLASS_NAME}`,
     seguro("rolagem rápida", attachQuickRoll),
   );
+  Hooks.on(`render${SHEET_CLASS_NAME}`, seguro("acessibilidade", enhanceSheetA11y));
   const mod = game.modules.get(MODULE_ID);
   if (mod) mod.api = { version: mod.version, resetPreferences };
 });

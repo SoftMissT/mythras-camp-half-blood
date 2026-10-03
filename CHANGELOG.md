@@ -1,3 +1,13 @@
+## 0.0.9 (2026-10-03): HUD do cabeçalho acessível + locais de acerto em português
+
+- **Novo:** HUD do cabeçalho reestruturada (Parte 3 do CSS): avatar com borda dourada, nomes com rótulo junto ao campo (13px), cartões de atributos sobre o azul do cabeçalho, números tabulares. Alvos de clique >= 24x24px (WCAG 2.5.8) em +/-, engrenagem e controles da janela; anel de foco visível de 2px com contraste AA.
+- **Novo:** `scripts/a11y.mjs` - aria-labels em português (Aumentar/Diminuir <atributo>, Ajustar atributos da ficha), tabindex/role nos controles div/span com teclado (Enter/Espaço), MutationObserver para sheets novos. Só toca aria/tabindex/data-* - nenhum valor de ator (Art. IV).
+- **Corrigido:** locais de acerto em inglês (Right Leg, Left Leg, Abdomen, Chest, Right Arm, Left Arm, Head) renomeados no mundo (atores "LLM" e "Ator" + compendium humanoidHitLocations) para as traducoes oficiais do proprio sistema Mythras (`static/lang/ptbr.json`): Perna direita, Perna esquerda, Abdômen, Peito, Braço direito, Braço esquerdo, Cabeça (mapa en->pt oficial). Logico do sistema usa id, nao nome (verificado no fonte kp-systems/mythras) - renomeio sem efeito em rolagens. Reversivel: aplicar o mapa inverso.
+- **Decisão:** siglas STR/CON/SIZ/DEX/INT/POW/CHA, AP, HP, DM e ENC mantidas em ingles - o sistema oficial nao tem chave pt-BR para elas (fallback en em `MYTHRAS.STR`); traduzir seria inventar siglas fora da fonte.
+- **Novo:** aprimoramento visual da HUD (skill high-end-visual-design): casco double-bezel nos cartoes de atributos, animacao de entrada `pj-rise` com escalonamento, botoes +/- magneticos (hover/active), engrenagem que gira 90 graus, avatar com escala suave no hover e bloco `prefers-reduced-motion` desligando tudo para quem pedir menos movimento.
+- **Corrigido:** area de clique do link de documento na barra da janela para 24px (WCAG 2.5.8).
+- **Validação:** testes Node 11/11, `node --check` limpo, prova ao vivo no Foundry: aba Combate inteira em português (capturas em .playwright-mcp/).
+
 # Histórico de versões
 
 ## 0.0.8 (2026-10-03): item sheets e diálogos do sistema traduzidos
