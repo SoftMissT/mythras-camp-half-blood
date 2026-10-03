@@ -1,4 +1,4 @@
-# Mythras — Camp Half-Blood
+# Mythras Camp Half-Blood
 
 ![Banner Camp Half-Blood](assets/banner_modulo.webp)
 
@@ -8,7 +8,7 @@ Módulo para Foundry VTT e sistema Mythras. A ficha Camp Half-Blood, rolagem rá
 
 **[Baixar Mythras Camp Half-Blood v0.0.3](https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.3/mythras-camp-halfblood-v0.0.3-updated.zip)**
 
-Manifesto para instalação direta no Foundry — use o botão **Copy** no canto do bloco:
+Manifesto para instalação direta no Foundry use o botão **Copy** no canto do bloco:
 
 ```text
 https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.3/module.json
@@ -38,4 +38,4 @@ https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.3/modul
 
 ## Licença
 
-MIT — [LICENSE](LICENSE).
+MIT [LICENSE](LICENSE).
