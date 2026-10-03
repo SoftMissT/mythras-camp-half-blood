@@ -1,4 +1,9 @@
-import { MODULE_ID, SETTINGS, DEFAULTS, CURRENT_MIGRATION } from "./constants.mjs";
+import {
+  MODULE_ID,
+  SETTINGS,
+  DEFAULTS,
+  CURRENT_MIGRATION,
+} from "./constants.mjs";
 import { refreshSheets } from "./prefs.mjs";
 import { PreferencesApp } from "./preferences-app.mjs";
 
@@ -44,7 +49,8 @@ export function registerSettings() {
 }
 
 export async function migrateToCampTemplate() {
-  if (game.settings.get(MODULE_ID, SETTINGS.MIGRATION) === CURRENT_MIGRATION) return;
+  if (game.settings.get(MODULE_ID, SETTINGS.MIGRATION) === CURRENT_MIGRATION)
+    return;
   await Promise.all([
     game.settings.set(MODULE_ID, SETTINGS.LAYOUT, DEFAULTS.layout),
     game.settings.set(MODULE_ID, SETTINGS.THEME, DEFAULTS.theme),
