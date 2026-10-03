@@ -1,5 +1,12 @@
 # Histórico de versões
 
+## 0.0.7 (2026-10-03): localização verificada por fonte externa
+
+- **Corrigido:** 55 rótulos que permaneciam em inglês (cabeçalho, abas, Combate, Itens, Magia, condições, atributos de elementos) agora traduzidos — validados com varredura exaustiva do DOM em todas as abas.
+- **Corrigido:** traduções revisadas no Google Tradutor: `Boating → Navegação`, `Frame → Porte físico`, `Brawn → Vigor físico`, `Burdened → Sobrecarregado`, `Overloaded → Sobrecarga excessiva`, `Trinkets → Badulaques`, `Impale Size → Tamanho de empalamento`, `Melee Weapons → Armas de corpo a corpo`, `Memorized → Memorizadas`.
+- **Novo:** padrão `rótulo: valor` no tradutor (ex.: `Penalidade de armadura: 0`, `ENC atual: 0`).
+- **Validação:** testes Node (11/11) e varredura ao vivo no Foundry com zero textos em inglês.
+
 ## 0.0.6 (2026-10-03): localização completa da ficha
 
 - **Corrigido:** rótulos de atributos, movimento, fadiga, cabeçalhos de perícias e resultados do chat agora são traduzidos no DOM renderizado.
