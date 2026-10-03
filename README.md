@@ -3,7 +3,7 @@
 [![Validação](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml/badge.svg)](https://github.com/SoftMissT/mythras-camp-half-blood/actions/workflows/validate.yml)
 [![Foundry VTT v14](https://img.shields.io/badge/Foundry%20VTT-v14-7b2cbf)](https://foundryvtt.com/)
 [![Sistema Mythras](https://img.shields.io/badge/sistema-Mythras-0b2a4a)](https://foundryvtt.com/packages/mythras)
-[![Versão](https://img.shields.io/badge/versão-0.0.4-f26b21)](https://github.com/SoftMissT/mythras-camp-half-blood/releases/tag/v0.0.4)
+[![Versão](https://img.shields.io/badge/versão-0.0.5-f26b21)](https://github.com/SoftMissT/mythras-camp-half-blood/releases/tag/v0.0.5)
 [![Licença MIT](https://img.shields.io/badge/licença-MIT-18794e)](LICENSE)
 
 ![Banner Camp Half-Blood](assets/banner_modulo.webp)
@@ -12,12 +12,12 @@ Módulo para Foundry VTT e sistema Mythras. A ficha Camp Half-Blood, rolagem rá
 
 ## Download
 
-**[Baixar Mythras Camp Half-Blood v0.0.4](https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.4/mythras-camp-halfblood-v0.0.4.zip)**
+**[Baixar a versão mais recente](https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/mythras-camp-halfblood.zip)**
 
 Para instalar pelo manifesto, use o botão **Copy** no canto do bloco e cole o endereço no Foundry:
 
 ```text
-https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.4/module.json
+https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/module.json
 ```
 
 ## Instalação
@@ -40,7 +40,8 @@ https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.4/modul
 
 - Foundry VTT: v13+; verificado em v14.
 - Sistema: `mythras`.
-- Versão: `0.0.4`.
+- Versão publicada: `0.0.5`.
+- Atualizações: o manifesto `latest` permite que o Foundry encontre novas releases sem reinstalação manual.
 
 ## Licença
 

@@ -1,4 +1,4 @@
-MYTHRAS – CAMP HALF-BLOOD  ·  versão 0.0.4
+MYTHRAS – CAMP HALF-BLOOD  ·  versão 0.0.5
 Instalação (sem programar, sem GitHub)
 
 1) FECHE o Foundry (ou pelo menos saia do mundo).
@@ -30,4 +30,7 @@ SE ALGO DER ERRADO
    - Se nada resolver, desative o módulo (acima) e me mande um print do console.
 
 Este módulo NÃO altera dados do personagem nem arquivos do sistema Mythras.
+Manifesto estável para instalação e atualizações:
+https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/module.json
+
 Fontes: Cinzel e Alegreya Sans via Google Fonts, com fallback do sistema.

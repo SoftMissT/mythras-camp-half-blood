@@ -1,4 +1,4 @@
-ROTEIRO DE TESTES · v0.0.4  (faça com o Foundry aberto e a tecla F12 → aba "Console" visível)
+ROTEIRO DE TESTES · v0.0.5  (faça com o Foundry aberto e a tecla F12 → aba "Console" visível)
 Para cada item, anote: OK / NÃO FUNCIONOU / DÚVIDA. Se não funcionou, tire um print e copie o texto vermelho do console.
 
 CT-001  Instalar, ativar no mundo e recarregar (F5).

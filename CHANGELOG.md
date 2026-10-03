@@ -1,5 +1,12 @@
 # Histórico de versões
 
+## 0.0.5 (2026-10-03): canal de atualização do Foundry
+
+- **Corrigido:** o campo `manifest` agora usa a URL estável `releases/latest/download/module.json`.
+- **Novo:** a release publica `module.json` como asset, permitindo que o Foundry verifique atualizações futuras.
+- **Novo:** o README oferece um ZIP de download com nome estável (`mythras-camp-halfblood.zip`).
+- **Mantido:** o campo `download` de cada manifesto aponta para o ZIP versionado da própria release.
+
 ## 0.0.4 (2026-10-03): resultados d100 e português
 
 - **Removido:** modo escuro, modo sistema e seletor de layout alternativo.

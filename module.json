@@ -2,13 +2,13 @@
   "id": "mythras-camp-halfblood",
   "title": "Mythras – Camp Half-Blood",
   "description": "Ficha Camp Half-Blood para Mythras, rolagem rápida de perícias e visual claro em português. Não altera dados do sistema.",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "authors": [{"name": "SoftMissT"}],
   "url": "https://github.com/SoftMissT/mythras-camp-half-blood",
-  "readme": "https://github.com/SoftMissT/mythras-camp-half-blood/blob/v0.0.4/README.md",
+  "readme": "https://github.com/SoftMissT/mythras-camp-half-blood/blob/main/README.md",
   "license": "LICENSE",
-  "manifest": "https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.4/module.json",
-  "download": "https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.4/mythras-camp-halfblood-v0.0.4.zip",
+  "manifest": "https://github.com/SoftMissT/mythras-camp-half-blood/releases/latest/download/module.json",
+  "download": "https://github.com/SoftMissT/mythras-camp-half-blood/releases/download/v0.0.5/mythras-camp-halfblood-v0.0.5.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -24,7 +24,7 @@
   "media": [
     {
       "type": "setup",
-      "url": "https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/v0.0.4/assets/banner_modulo.webp",
+      "url": "https://raw.githubusercontent.com/SoftMissT/mythras-camp-half-blood/main/assets/banner_modulo.webp",
       "caption": "Mythras — Camp Half-Blood"
     }
   ],
