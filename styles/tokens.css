@@ -1,0 +1,45 @@
+/* Camp Half-Blood · tokens. Tudo escopado em .pj-themed: sem a classe, nada muda (Art. V). */
+.pj-themed.mythras.sheet {
+  --pj-orange: #f26b21;
+  /* só para bordas e foco, nunca para texto */
+  --pj-orange-dk: #c24e0f;
+  --pj-orange-deep: #a63c08;
+  /* texto de destaque (contraste AA) */
+  --pj-sea: #0b2a4a;
+  --pj-sea-2: #14416e;
+  --pj-bronze: #b08d57;
+  --pj-gold: #d9b45a;
+  --pj-parchment: #f1e6cc;
+  --pj-parchment-2: #e6d7b3;
+  --pj-ink: #2b1d0e;
+
+  --pj-font-title: "PJ Cinzel", "Trajan Pro", Georgia, serif;
+  --pj-font-body: "PJ Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+
+  --pj-bg: var(--pj-parchment);
+  --pj-bg-alt: var(--pj-parchment-2);
+  --pj-text: var(--pj-ink);
+  --pj-heading: var(--pj-sea);
+  --pj-border: var(--pj-bronze);
+  --pj-accent-ink: var(--pj-orange-deep);
+  --pj-input-bg: rgba(255, 255, 255, 0.55);
+  --pj-btn-bg: var(--pj-sea);
+  --pj-btn-text: var(--pj-parchment);
+}
+
+/* Modo escuro do Foundry: mar noturno */
+.pj-themed.mythras.sheet.pj-theme-dark {
+  --pj-bg: #0a1f37;
+  --pj-bg-alt: #10314f;
+  --pj-text: #ece3cd;
+  --pj-heading: var(--pj-gold);
+  --pj-border: #7a6238;
+  --pj-accent-ink: var(--pj-gold);
+  --pj-input-bg: rgba(255, 255, 255, 0.07);
+  --pj-btn-bg: var(--pj-bronze);
+  --pj-btn-text: var(--pj-ink);
+}
+
+.pj-themed.mythras.sheet.pj-theme-light {
+  color-scheme: light;
+}

@@ -1,0 +1,55 @@
+ROTEIRO DE TESTES · v0.0.3  (faça com o Foundry aberto e a tecla F12 → aba "Console" visível)
+Para cada item, anote: OK / NÃO FUNCIONOU / DÚVIDA. Se não funcionou, tire um print e copie o texto vermelho do console.
+
+CT-001  Instalar, ativar no mundo e recarregar (F5).
+        Esperado: nenhum erro vermelho com [mythras-camp-halfblood] no console.
+
+CT-002  Abrir uma ficha de personagem.
+        Esperado: aparece o botão "Camp" na barra de título e a ficha já abre no layout Camp claro.
+
+CT-003  Clicar em "Camp".
+        Esperado: abre o painel de preferências. Depois feche e abra também por
+        Configurações do jogo > Configurações dos módulos > "Camp: preferências" > botão.
+        Esperado: é o mesmo painel.
+
+CT-004  Clique ESQUERDO no valor (a porcentagem) de uma perícia.
+        Esperado: NÃO abre menu. Aparece no chat o cartão com as 6 dificuldades
+        (Muito Fácil até Herculeana), o total, o limite e PASSOU/FALHOU, igual ao seu print.
+        Cronometre a olho: deve aparecer em até 1 segundo.
+
+CT-005  Clique DIREITO no valor de uma perícia.
+        Esperado: abre o menu completo (dificuldade, aumento, ponto de sorte, contestado).
+
+CT-006  SHIFT + clique esquerdo no valor de uma perícia.
+        Esperado: abre o menu completo.
+
+CT-007  No painel, desligue a "Rolagem rápida".
+        Esperado: clique esquerdo volta a abrir o menu; clique direito rola direto (como no sistema).
+        A dica de texto ao passar o mouse some.
+
+CT-008  Com a Rolagem rápida LIGADA, passe o mouse sobre o valor de uma perícia.
+        Esperado: aparece a dica "Clique: rolar · Direito: opções".
+
+CT-009  Role o dano de uma arma e use o botão "Rolar local de acerto".
+        Esperado: funciona igual a antes.
+
+CT-010  Inicie um teste contestado pelo menu e responda pelo botão do chat.
+        Esperado: funciona igual a antes.
+
+CT-011  Com uma conta de JOGADOR (não Mestre): abra o painel, mude a Rolagem rápida, aperte F5.
+        Esperado: a escolha continua depois de recarregar, e a ficha do Mestre NÃO muda.
+
+CT-012  No painel, ligue o "Visual do Acampamento".
+        Esperado: a ficha Clássica ganha cabeçalho e cores do Acampamento na hora, sem recarregar.
+        Desligue: volta ao visual original.
+
+CT-013  Clique em "Voltar ao padrão".
+        Esperado: Camp claro, Rolagem rápida ligada.
+
+CT-014  No console, cole:  game.modules.get("mythras-camp-halfblood").api.resetPreferences()
+        Esperado: mesmo efeito do CT-013.
+
+CT-015  Confira, em personagens que você já tinha, que atributos, PV e perícias continuam iguais.
+
+O QUE ME ENVIAR: a lista com OK / NÃO FUNCIONOU / DÚVIDA, mais prints dos itens que falharem e do
+Console (F12). Se o visual do Acampamento (CT-012) estiver estranho, mande um print da ficha.

@@ -1,0 +1,33 @@
+MYTHRAS – CAMP HALF-BLOOD  ·  versão 0.2.0
+Instalação (sem programar, sem GitHub)
+
+1) FECHE o Foundry (ou pelo menos saia do mundo).
+
+2) Se você instalou a versão antiga (fase 1, só CSS):
+   copie a pasta "mythras-camp-halfblood" que está dentro de Data/modules para outro lugar
+   (é a sua cópia de segurança) e depois APAGUE a pasta antiga em Data/modules.
+
+3) Extraia este zip. Dentro dele há uma pasta chamada "mythras-camp-halfblood".
+   Coloque ESSA pasta dentro de Data/modules, de modo que fique assim:
+      Data/modules/mythras-camp-halfblood/module.json
+   A pasta "Data" é a pasta de dados do seu Foundry; o caminho dela aparece na tela
+   de configuração do Foundry (User Data Path).
+
+4) Abra o Foundry e entre no seu mundo. Vá em:
+      Configurações do jogo  >  Gerenciar módulos
+   Marque "Mythras – Camp Half-Blood" e salve. Quando pedir, deixe recarregar.
+
+5) Abra uma ficha de personagem. Na barra de título deve aparecer o botão "Camp".
+   Clique nele para abrir as preferências.
+
+COMO REMOVER
+   Gerenciar módulos > desmarque o módulo. A ficha volta exatamente ao original.
+
+SE ALGO DER ERRADO
+   - Aperte F12, abra a aba "Console" e procure linhas com [mythras-camp-halfblood].
+   - Para voltar tudo ao padrão pelo console, cole:
+       game.modules.get("mythras-camp-halfblood").api.resetPreferences()
+   - Se nada resolver, desative o módulo (acima) e me mande um print do console.
+
+Este módulo NÃO altera dados do personagem nem arquivos do sistema Mythras.
+Fontes: Cinzel e Alegreya Sans (licença OFL, em fonts/).

@@ -1,0 +1,222 @@
+/* Camp Half-Blood · componentes (v0.2).
+   Parte 1: visual do Acampamento, escopado em .pj-themed (só vale se o jogador ligar).
+   Parte 2: painel de preferências (.pj-prefs). */
+
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel:wght@600;700&display=swap");
+
+/* ---------- Parte 1: visual do Acampamento ---------- */
+.pj-themed.mythras.sheet {
+  --pj-meander: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='10' viewBox='0 0 24 10'><path d='M0 9H3V1H15V7H8V4H11M15 9H24' fill='none' stroke='%23b08d57' stroke-width='1.6' stroke-linecap='square'/></svg>");
+}
+
+.pj-themed.mythras.sheet.window-app {
+  border: 2px solid var(--pj-border);
+  border-radius: 6px;
+}
+
+/* Barra de título da janela */
+.pj-themed.mythras.sheet .window-header {
+  background:
+    var(--pj-meander) repeat-x left bottom / 24px 10px,
+    linear-gradient(180deg, var(--pj-orange-dk) 0%, #a63c08 100%);
+  border-bottom: 3px solid var(--pj-bronze);
+  color: #fff;
+  font-family: var(--pj-font-title);
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .45);
+}
+
+.pj-themed.mythras.sheet .window-header :is(a, button, .window-title) {
+  color: inherit;
+}
+
+/* Cabeçalho da ficha (a classe real do sistema é .sheet-header) */
+.pj-themed.mythras.sheet .sheet-header {
+  background: linear-gradient(180deg, var(--pj-sea-2) 0%, var(--pj-sea) 100%);
+  border-bottom: 3px solid var(--pj-bronze);
+  color: #fff;
+}
+
+.pj-themed.mythras.sheet .window-content {
+  background: var(--pj-bg);
+  color: var(--pj-text);
+  font-family: var(--pj-font-body);
+}
+
+.pj-themed.mythras.sheet .window-content :is(h1, h2, h3, h4) {
+  font-family: var(--pj-font-title);
+  color: var(--pj-heading);
+  letter-spacing: .03em;
+}
+
+.pj-themed.mythras.sheet .sheet-header :is(h1, h2, h3, h4) {
+  color: #fff;
+  border: none;
+}
+
+.pj-themed.mythras.sheet .window-content :is(input:not([type=checkbox]):not([type=radio]):not([type=range]), select, textarea) {
+  background: var(--pj-input-bg);
+  color: var(--pj-text);
+  border: 1px solid var(--pj-border);
+  border-radius: 3px;
+}
+
+.pj-themed.mythras.sheet .window-content :is(input, select, textarea):focus {
+  outline: none;
+  border-color: var(--pj-orange);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--pj-orange) 45%, transparent);
+}
+
+.pj-themed.mythras.sheet :is(input[type=checkbox], input[type=radio]) {
+  accent-color: var(--pj-orange-dk);
+}
+
+.pj-themed.mythras.sheet .window-content :is(button, .button) {
+  background: var(--pj-btn-bg);
+  color: var(--pj-btn-text);
+  border: 1px solid var(--pj-border);
+  border-radius: 3px;
+  font-family: var(--pj-font-title);
+}
+
+.pj-themed.mythras.sheet .window-content :is(button, .button):hover {
+  background: var(--pj-orange-deep);
+  color: #fff;
+}
+
+.pj-themed.mythras.sheet .window-content a:hover {
+  color: var(--pj-accent-ink);
+  text-shadow: none;
+}
+
+/* Abas da ficha (.sheet-tabs é o seletor real do sistema) */
+.pj-themed.mythras.sheet .sheet-tabs {
+  font-family: var(--pj-font-title);
+  border-color: var(--pj-border);
+}
+
+.pj-themed.mythras.sheet .sheet-tabs .item.active {
+  color: var(--pj-accent-ink);
+  border-bottom: 3px solid var(--pj-orange);
+  text-shadow: none;
+}
+
+.pj-themed.mythras.sheet {
+  scrollbar-color: var(--pj-bronze) transparent;
+}
+
+/* ---------- Parte 2: painel de preferências ---------- */
+.pj-prefs .window-content {
+  padding: 0;
+}
+
+.pj-prefs .pj-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 14px 16px 12px;
+}
+
+.pj-prefs .pj-group h3 {
+  margin: 0 0 6px;
+  font-size: 1.05em;
+  border: none;
+}
+
+.pj-prefs .pj-hint {
+  margin: 6px 0 0;
+  font-size: .9em;
+  opacity: .8;
+}
+
+.pj-prefs .pj-seg {
+  display: flex;
+  gap: 6px;
+}
+
+.pj-prefs .pj-seg button {
+  flex: 1;
+}
+
+.pj-prefs .pj-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  min-height: 48px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.pj-prefs .pj-toggle-icon {
+  font-size: 1.6em;
+  width: 30px;
+  text-align: center;
+}
+
+.pj-prefs .pj-toggle-text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+  min-width: 0;
+}
+
+.pj-prefs .pj-toggle-text small {
+  font-size: .85em;
+  opacity: .85;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+.pj-prefs .pj-state {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Estado ligado: fundo laranja escuro com texto branco (contraste AA) + o texto "Ligado" */
+.pj-prefs button[aria-pressed="true"] {
+  background: #a63c08;
+  color: #fff;
+  border-color: #a63c08;
+}
+
+.pj-prefs button[aria-pressed="true"] small {
+  opacity: 1;
+}
+
+.pj-prefs button:focus-visible {
+  outline: 2px solid #f26b21;
+  outline-offset: 2px;
+}
+
+.pj-prefs button[disabled] {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/* Falha vermelha, sucesso verde, crítico dourado; o sistema continua calculando. */
+.chat-message .pj-result-failure { color: #b42318; }
+.chat-message .pj-result-success { color: #18794e; }
+.chat-message .pj-result-critical { color: #9a6700; font-weight: 700; }
+.chat-message :is(.pj-result-failure, .pj-result-success, .pj-result-critical) strong { color: inherit; }
+
+.pj-prefs .pj-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.pj-prefs .pj-reset {
+  width: auto;
+  flex: none;
+}
+
+.pj-prefs .pj-version {
+  font-size: .85em;
+  opacity: .7;
+}

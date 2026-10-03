@@ -1,0 +1,27 @@
+name: Validate module
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate JSON manifests and translations
+        run: node -e "for (const f of ['module.json','lang/pt-BR.json','lang/en.json']) JSON.parse(require('fs').readFileSync(f));"
+      - name: Check JavaScript syntax
+        shell: bash
+        run: find scripts -name '*.mjs' -print0 | xargs -0 -n1 node --check
+      - name: Check referenced module files
+        run: |
+          node - <<'NODE'
+          const fs = require('fs'); const m = JSON.parse(fs.readFileSync('module.json'));
+          for (const f of [...(m.esmodules ?? []), ...(m.styles ?? []), ...(m.languages ?? []).map(x => x.path)]) {
+            if (!fs.existsSync(f)) throw new Error(`Missing manifest file: ${f}`);
+          }
+          NODE
