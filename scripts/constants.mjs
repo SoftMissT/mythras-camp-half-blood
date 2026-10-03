@@ -4,6 +4,17 @@ export const SYSTEM_ID = "mythras";
 export const SYSTEM_VERSION_TESTED = "2.3.0";
 // Nome da classe da ficha de personagem do Mythras (confirmado no console do usuário).
 export const SHEET_CLASS_NAME = "CharacterSheetMythras";
+// Demais sheets do bundle Mythras 2.3.0 (items + criatura) — só tradução de rótulos.
+export const EXTRA_SHEET_CLASS_NAMES = Object.freeze([
+  "CreatureSheetMythras",
+  "ItemSheetBase",
+  "ArmorSheetMythras",
+  "PhysicalItemSheetMythras",
+  "SpellSheetMythras",
+  "EquipmentSheetMythras",
+  "SkillSheetMythras",
+  "CyberModuleSheetMythras",
+]);
 export const LOG = "[mythras-camp-halfblood]";
 
 export const SETTINGS = Object.freeze({

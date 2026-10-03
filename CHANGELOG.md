@@ -1,5 +1,14 @@
 # Histórico de versões
 
+## 0.0.8 (2026-10-03): item sheets e diálogos do sistema traduzidos
+
+- **Corrigido:** todas as 8 classes de sheet do Mythras 2.3.0 agora têm hook de tradução (`CharacterSheet`, `CreatureSheet`, `SkillSheet`, `PhysicalItemSheet`, `SpellSheet`, `EquipmentSheet`, `ArmorSheet`, `CyberModuleSheet`) — o sheet de item deixou de ficar em inglês.
+- **Corrigido:** diálogos do sistema via `renderDialog` (ex.: ⚙ Stat Tracker → "Acompanhamento de atributos / Em breve :)").
+- **Corrigido:** nomes default de dados exibidos na ficha: `New Storage → Novo armazenamento`, `New Spell → Nova magia`, filtro `Uncategorized → Sem categoria`.
+- **Corrigido:** novos rótulos de item/hit location: `Características base`, `Penalidade de ENC`, `Treino`, `Diversos`, `HP base/máximo/atual`, `Início/Fim da faixa de rolagem` — inclui normalização de sublinhado (`ENC_Penalty → Penalidade de ENC`).
+- **Corrigido:** `No Penalties → Sem penalidades` nos cartões d100 do chat.
+- **Validação:** testes Node (11/11) e prova ao vivo no Foundry por injeção do código local (item sheet, diálogo e chat traduzidos).
+
 ## 0.0.7 (2026-10-03): localização verificada por fonte externa
 
 - **Corrigido:** 55 rótulos que permaneciam em inglês (cabeçalho, abas, Combate, Itens, Magia, condições, atributos de elementos) agora traduzidos — validados com varredura exaustiva do DOM em todas as abas.

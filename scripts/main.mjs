@@ -1,4 +1,10 @@
-import { MODULE_ID, SYSTEM_ID, SHEET_CLASS_NAME, LOG } from "./constants.mjs";
+import {
+  MODULE_ID,
+  SYSTEM_ID,
+  SHEET_CLASS_NAME,
+  EXTRA_SHEET_CLASS_NAMES,
+  LOG,
+} from "./constants.mjs";
 import { registerSettings, migrateToCampTemplate } from "./settings.mjs";
 import { registerHeaderButton } from "./header-button.mjs";
 import { attachQuickRoll } from "./quick-roll.mjs";
@@ -37,6 +43,11 @@ Hooks.once("init", () => {
     `render${SHEET_CLASS_NAME}`,
     seguro("tradução", translateMythrasSheet),
   );
+  for (const cls of EXTRA_SHEET_CLASS_NAMES) {
+    Hooks.on(`render${cls}`, seguro(`tradução ${cls}`, translateMythrasSheet));
+  }
+  // Diálogos do sistema (ex.: Stat Tracker) — só rótulos conhecidos do LABELS.
+  Hooks.on("renderDialog", seguro("tradução de diálogo", translateMythrasSheet));
   Hooks.on(
     "renderChatMessageHTML",
     seguro("tradução do chat", (_message, html) => {

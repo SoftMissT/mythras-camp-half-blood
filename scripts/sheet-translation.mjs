@@ -78,6 +78,7 @@ const LABELS = new Map([
   ["rank", "Graduação"],
   ["roll", "Rolar"],
   ["roll modifiers", "Modificadores da rolagem"],
+  ["no penalties", "Sem penalidades"],
   ["skill", "Perícia"],
   ["result", "Resultado"],
   ["difficulty", "Dificuldade"],
@@ -179,13 +180,29 @@ const LABELS = new Map([
   ["search...", "Buscar..."],
   ["armor penalty", "Penalidade de armadura"],
   ["current enc", "ENC atual"],
+  // Item sheets, diálogo Stat Tracker e nomes default do sistema (2026-10-03).
+  ["base characteristics", "Características base"],
+  ["enc penalty", "Penalidade de ENC"],
+  ["training", "Treino"],
+  ["misc", "Diversos"],
+  ["uncategorized", "Sem categoria"],
+  ["new storage", "Novo armazenamento"],
+  ["new spell", "Nova magia"],
+  ["stat tracker", "Acompanhamento de atributos"],
+  ["coming soon :)", "Em breve :)"],
+  ["roll range start", "Início da faixa de rolagem"],
+  ["roll range end", "Fim da faixa de rolagem"],
+  ["base hp", "HP base"],
+  ["max hp", "HP máximo"],
+  ["max hp mod", "Mod. de HP máximo"],
+  ["current hp", "HP atual"],
 ]);
 
 const TRANSLATED_ATTRIBUTES = ["title", "aria-label", "placeholder"];
 
 export function translateLabel(value) {
   const text = String(value ?? "").trim();
-  const normalized = text.toLowerCase();
+  const normalized = text.toLowerCase().replace(/_/g, " ");
   const direct = LABELS.get(normalized);
   if (direct) return direct;
   const punctuation = normalized.match(/^(.+?)([:：])$/);
